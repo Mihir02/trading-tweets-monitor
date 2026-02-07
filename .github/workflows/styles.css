@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.update-time {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+#tweets-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tweet-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tweet-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.tweet-header strong {
+    color: #1a1a1a;
+    font-size: 1.1em;
+}
+
+.username {
+    color: #657786;
+    font-size: 0.9em;
+}
+
+.tweet-text {
+    color: #14171a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.tweet-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #e1e8ed;
+}
+
+.tweet-time {
+    color: #657786;
+    font-size: 0.85em;
+}
+
+.tweet-link {
+    color: #1da1f2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.tweet-link:hover {
+    text-decoration: underline;
+}
+
+.no-tweets {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 40px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .tweet-card {
+        padding: 15px;
+    }
+}
