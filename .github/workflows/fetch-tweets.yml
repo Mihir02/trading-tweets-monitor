@@ -23,6 +23,7 @@ jobs:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python fetch-tweets.py
       
       - name: Commit changes
@@ -32,3 +33,5 @@ jobs:
           git add data/
           git commit -m "Update tweets $(date)" || exit 0
           git push
+
+
